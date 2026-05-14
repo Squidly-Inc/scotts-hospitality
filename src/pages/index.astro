@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const url = (p: string) => `${base}${p}`;
+
+const heroVideo = "https://video.wixstatic.com/video/56773e_bc6abf78abb1447fa292b3a558ead3ce/1080p/mp4/file.mp4";
+
+const properties = [
+  {
+    name: "Scott's Seafood",
+    tagline: "Coastal cuisine. Elevated experience.",
+    body: "The flagship restaurant. Forty years of seafood-driven hospitality in downtown San Jose.",
+    href: "https://squidly-inc.github.io/scotts-mockup/",
+    img: "https://static.wixstatic.com/media/56773e_2920d977ee68477c9c56ae32b1903e29~mv2.jpg/v1/fill/w_892,h_670/seafood%20paella_edited.jpg",
+    accent: "text-ink",
+  },
+  {
+    name: "Scott's Ballroom",
+    tagline: "Above the skyline.",
+    body: "6,800 sq ft of event space at the Rotary Summit Center. Weddings, galas, and corporate events for up to 700.",
+    href: "https://squidly-inc.github.io/scotts-ballroom/",
+    img: "https://static.wixstatic.com/media/56773e_e8eb6ec8755447599adca9d512c222c4~mv2.jpg/v1/fill/w_892,h_670/JK8A0325-1-6-scaled_edited.jpg",
+    accent: "text-ink",
+  },
+  {
+    name: "Scott's Provisions",
+    tagline: "Chef-driven catering.",
+    body: "Boxed meals, drop-off catering, full-service events, and bar service. Built for the modern workplace.",
+    href: "https://squidly-inc.github.io/scotts-provisions/",
+    img: "https://static.wixstatic.com/media/56773e_b9fbc93c14bd4b5b8ff904dfd944a196~mv2.jpg/v1/fill/w_892,h_670/458690613_1500747403903587_2287569386930.jpg",
+    accent: "text-ink",
+  },
+  {
+    name: "Scott's Social Club",
+    tagline: "Above the skyline.",
+    body: "A private members' community for Silicon Valley professionals — networking, dining, and curated experiences.",
+    href: "https://squidly-inc.github.io/scotts-social-club/",
+    img: "https://static.wixstatic.com/media/56773e_2920d977ee68477c9c56ae32b1903e29~mv2.jpg/v1/fill/w_892,h_670/seafood%20paella_edited.jpg",
+    accent: "text-ink",
+  },
+];
+---
+
+<Layout
+  title="Scott's Hospitality Group | Downtown San Jose"
+  description="Restaurant, ballroom, catering, and social club — Scott's Hospitality Group, downtown San Jose since 1986."
+  transparentHeader={true}
+>
+  <!-- HERO -->
+  <section class="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
+    <video class="absolute inset-0 w-full h-full object-cover" src={heroVideo} autoplay muted loop playsinline
+      poster="https://static.wixstatic.com/media/56773e_e8eb6ec8755447599adca9d512c222c4~mv2.jpg/v1/fill/w_1920,h_1080/JK8A0325-1-6-scaled_edited.jpg"></video>
+    <div class="absolute inset-0 bg-ink/60"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-5 sm:px-8">
+      <p class="fade-up text-gold-light uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 sm:mb-6">
+        Downtown San Jose · Since 1986
+      </p>
+      <h1 class="fade-up-delay-1 text-cream font-display text-[1.75rem] leading-[1.15] sm:text-7xl lg:text-8xl sm:leading-[1.0] max-w-4xl tracking-tight">
+        Scott's <span class="italic text-gold-light">Hospitality</span>
+      </h1>
+      <p class="fade-up-delay-2 text-cream/85 mt-5 sm:mt-8 max-w-2xl text-sm sm:text-xl leading-relaxed px-2">
+        One name. Four ways to gather. A restaurant, a ballroom, a catering team,
+        and a private club — all built on forty years of San Jose hospitality.
+      </p>
+      <div class="fade-up-delay-2 mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+        <a href="#explore" class="bg-gold-light text-ink text-sm font-semibold uppercase tracking-widest px-8 py-4 hover:bg-cream transition text-center">
+          Explore the Family
+        </a>
+        <a href={url("/our-story")} class="border border-cream/40 text-cream text-sm font-semibold uppercase tracking-widest px-8 py-4 hover:border-gold-light hover:text-gold-light transition text-center">
+          Our Story
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="bg-cream-soft py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-gold-deep uppercase tracking-[0.3em] text-xs mb-6">A Family of Hospitality</p>
+      <h2 class="font-display text-3xl sm:text-5xl text-ink mb-8 leading-tight">
+        From a 62-seat restaurant in 1976<br/>
+        <span class="italic text-gold-deep">to a downtown legacy.</span>
+      </h2>
+      <p class="text-ink/75 leading-relaxed text-lg max-w-2xl mx-auto">
+        Scott's began in San Francisco in 1976 and has been a downtown San Jose
+        institution for nearly forty years. Today, Scott's Hospitality Group
+        operates four distinct properties — each with its own identity,
+        all built on the same foundation.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROPERTIES -->
+  <section id="explore" class="bg-paper py-20 sm:py-28 border-y border-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-14 sm:mb-20">
+        <p class="text-gold-deep uppercase tracking-[0.3em] text-xs mb-4">The Properties</p>
+        <h2 class="font-display text-3xl sm:text-5xl text-ink">Four ways to gather.</h2>
+      </div>
+      <div class="grid gap-10 md:grid-cols-2">
+        {properties.map((p, i) => (
+          <a href={p.href} class="group block bg-cream-soft overflow-hidden hover:shadow-2xl transition border-l-4 border-gold">
+            <div class="aspect-[5/3] overflow-hidden">
+              <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            </div>
+            <div class="p-6 sm:p-10">
+              <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">0{i + 1} · {p.tagline}</p>
+              <h3 class="font-display text-2xl sm:text-3xl text-ink mb-3">{p.name}</h3>
+              <p class="text-ink/70 leading-relaxed mb-5">{p.body}</p>
+              <span class="text-ink text-xs uppercase tracking-widest font-semibold border-b border-ink pb-1 group-hover:text-gold-deep group-hover:border-gold-deep">
+                Visit {p.name.replace("Scott's ", "")} →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASE -->
+  <section class="bg-ink py-20 sm:py-28 text-center text-cream">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <p class="text-gold-light uppercase tracking-[0.3em] text-xs mb-4">Forty Years</p>
+      <h2 class="font-display text-3xl sm:text-5xl mb-8 leading-tight">
+        Through every move and every menu,<br/>
+        <span class="italic text-gold-light">the team is the constant.</span>
+      </h2>
+      <p class="text-cream/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+        From the original San Francisco location to ten Scott's restaurants
+        across California and Hawaii, to a 40-year run in downtown San Jose,
+        Scott's has always been about the people behind it.
+      </p>
+      <a href={url("/our-story")} class="inline-block border border-gold-light text-gold-light text-xs font-semibold uppercase tracking-widest px-8 py-3 hover:bg-gold-light hover:text-ink transition">
+        Read Our Story →
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="bg-cream-soft py-20 sm:py-28 text-center">
+    <div class="max-w-2xl mx-auto px-5 sm:px-8">
+      <p class="text-gold-deep uppercase tracking-[0.3em] text-xs mb-4">Get in Touch</p>
+      <h2 class="font-display text-3xl sm:text-5xl text-ink mb-6 leading-tight">
+        Not sure where to start?
+      </h2>
+      <p class="text-ink/70 leading-relaxed mb-10">
+        Tell us about your event, your group, or your dining plans —
+        we'll route you to the right team.
+      </p>
+      <a href={url("/contact")} class="inline-block bg-gold-deep text-cream text-sm font-semibold uppercase tracking-widest px-10 py-4 hover:bg-ink transition">
+        Contact Us
+      </a>
+    </div>
+  </section>
+</Layout>

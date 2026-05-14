@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const url = (p: string) => `${base}${p}`;
+---
+
+<Layout title="Our Story | Scott's Hospitality">
+  <section class="bg-ink pt-32 pb-12 sm:pb-16">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-gold-light uppercase tracking-[0.3em] text-xs mb-4">Our Story</p>
+      <h1 class="font-display text-4xl sm:text-6xl text-cream mb-5 leading-tight">
+        Fifty years of opening<br/>
+        <span class="italic text-gold-light">new doors.</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="bg-cream-soft py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-8 text-ink/85 leading-relaxed text-lg">
+      <p class="font-display text-2xl text-ink leading-snug italic">
+        Scott's Seafood Grill & Bar was established in San Francisco in October of 1976
+        by Malcolm Stroud, Martin Newman, and Lloyd Wiborg.
+      </p>
+
+      <p>
+        Malcolm and Martin had purchased a building at the corner of Scott and Lombard,
+        originally intending to update it and sell it. After consideration, they
+        decided to open a seafood restaurant instead. They approached a friend of
+        Malcolm's to join them; he declined but suggested they contact Lloyd as a
+        potential investor and co-owner.
+      </p>
+
+      <p>
+        They opened to remarkable success, often seating over 500 diners a day with
+        only 62 seats. In 1977, <em>Nation's Restaurant News</em> named them the
+        <strong class="text-ink">"highest grossing per seat restaurant in the nation."</strong>
+        Their record was 582 covers in a single day — just shy of ten turns.
+      </p>
+
+      <p>
+        Over the years, Scott's expanded to ten locations across California and one
+        in Hawaii, plus a smaller spin-off concept called Scott's Chowder Houses.
+      </p>
+
+      <div class="border-l-4 border-gold pl-6 my-12">
+        <p class="font-display text-xl text-ink/90 italic leading-relaxed">
+          Malcolm asked his long-term accountant, Steve Mayer, to join him in
+          opening a Palo Alto location. Scott's Seafood Palo Alto opened in the
+          Town & Country shopping center — and after that, Scott's Seafood San Jose,
+          which originally opened in a penthouse on Park Avenue.
+        </p>
+      </div>
+
+      <p>
+        After Malcolm passed, Steve brought in Sammy Reyes as his partner. When
+        Scott's was bought out of its lease on Park Avenue, then-Mayor Sam Liccardo
+        reached out personally to Steve, asking him to find a new home for the
+        restaurant downtown. That new home is the current location on 1st Street,
+        where Scott's San Jose has been since 2020 — staying open through the
+        pandemic as a place the downtown community could rely on.
+      </p>
+
+      <p>
+        In 2024, Scott's entered into a long-term lease with the city's Rotary
+        Summit Center to expand into full-service event hosting — what is now
+        <strong class="text-ink">Scott's Ballroom</strong>. Catering and corporate
+        dining followed as <strong class="text-ink">Scott's Provisions</strong>.
+        The skyline-level private club, <strong class="text-ink">Scott's Social Club</strong>,
+        joined the family in 2025.
+      </p>
+
+      <p class="text-xl font-display italic text-ink leading-relaxed pt-6">
+        Scott's has built a history on finding new doors to open whenever others close.
+        Through every move, redecoration, and new concept, the heart of Scott's has
+        always been the dedicated team behind it.
+      </p>
+
+      <p>
+        Scott's thanks you for your continued business over the years and looks
+        forward to continuing to serve you in the future — for your dining,
+        catering, and event planning needs.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-paper py-20 sm:py-28 border-y border-line">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-12">
+        <p class="text-gold-deep uppercase tracking-[0.3em] text-xs mb-4">Today</p>
+        <h2 class="font-display text-3xl sm:text-5xl text-ink leading-tight">Four properties. One family.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="https://squidly-inc.github.io/scotts-mockup/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+          <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2020</p>
+          <h3 class="font-display text-xl text-ink mb-2">Scott's Seafood</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">The flagship restaurant on 1st Street.</p>
+        </a>
+        <a href="https://squidly-inc.github.io/scotts-ballroom/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+          <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2024</p>
+          <h3 class="font-display text-xl text-ink mb-2">Scott's Ballroom</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Event venue at the Rotary Summit Center.</p>
+        </a>
+        <a href="https://squidly-inc.github.io/scotts-provisions/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+          <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2024</p>
+          <h3 class="font-display text-xl text-ink mb-2">Scott's Provisions</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">Catering for workplaces and events.</p>
+        </a>
+        <a href="https://squidly-inc.github.io/scotts-social-club/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+          <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2025</p>
+          <h3 class="font-display text-xl text-ink mb-2">Scott's Social Club</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">A private members' community.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
