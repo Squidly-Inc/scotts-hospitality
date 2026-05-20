@@ -64,11 +64,30 @@ import Layout from "../layouts/Layout.astro";
     <div class="max-w-2xl mx-auto px-5 sm:px-8">
       <h2 class="font-display text-2xl sm:text-3xl text-ink mb-4">Not sure who to ask?</h2>
       <p class="text-ink/70 leading-relaxed mb-8">
-        Send us a note at the address below and we'll route you to the right team within one business day.
+        Send us a note at the address below and we'll route you to the right team.
       </p>
-      <a href="mailto:hello@scottshospitality.com" class="font-display text-xl text-gold-deep hover:text-ink transition">
-        hello@scottshospitality.com
+      <a href="mailto:info@scottshospitality.com" class="font-display text-xl text-gold-deep hover:text-ink transition">
+        info@scottshospitality.com
       </a>
+    </div>
+  </section>
+
+  <section class="bg-ink py-16 sm:py-20">
+    <div class="max-w-2xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-gold-light uppercase tracking-[0.3em] text-xs mb-3">Stay in the Loop</p>
+      <h2 class="font-display text-2xl sm:text-3xl text-cream mb-3 leading-tight">
+        One list. Four concepts.
+      </h2>
+      <p class="text-cream/70 leading-relaxed mb-7 text-sm">
+        Subscribe once and hear from every Scott's San Jose concept — new menus,
+        events, openings, and the occasional VIP invite.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input id="newsletter-email" type="email" required placeholder="you@example.com" class="flex-1 bg-cream-soft text-ink px-4 py-3 placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-gold-light" />
+        <button type="submit" class="bg-gold-light text-ink text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-cream transition">Subscribe</button>
+      </form>
+      <p class="text-cream/40 text-xs mt-4">We respect your inbox. No spam, unsubscribe anytime.</p>
     </div>
   </section>
 </Layout>
