@@ -1,4 +1,5 @@
 ---
+import { SITES } from "../lib/sites";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const url = (p: string) => `${base}${p}`;
 ---
@@ -18,10 +19,10 @@ const url = (p: string) => `${base}${p}`;
     <div>
       <h4 class="text-sm uppercase tracking-widest text-gold-light mb-4">The Scott's San Jose Family</h4>
       <ul class="text-sm space-y-2 text-cream/70">
-        <li><a href="https://squidly-inc.github.io/scotts-mockup/" class="hover:text-gold-light">Scott's Seafood San Jose</a></li>
-        <li><a href="https://squidly-inc.github.io/scotts-ballroom/" class="hover:text-gold-light">Scott's Ballroom</a></li>
-        <li><a href="https://squidly-inc.github.io/scotts-provisions/" class="hover:text-gold-light">Scott's Provisions</a></li>
-        <li><a href="https://www.scottssocialclub.com/" class="hover:text-gold-light">Scott's Social Club</a></li>
+        <li><a href={`${SITES.restaurant}/`} class="hover:text-gold-light">Scott's Seafood San Jose</a></li>
+        <li><a href={`${SITES.ballroom}/`} class="hover:text-gold-light">Scott's Ballroom</a></li>
+        <li><a href={`${SITES.provisions}/`} class="hover:text-gold-light">Scott's Provisions</a></li>
+        <li><a href={`${SITES.socialClub}/`} class="hover:text-gold-light">Scott's Social Club</a></li>
       </ul>
     </div>
 

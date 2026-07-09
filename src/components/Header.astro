@@ -1,4 +1,5 @@
 ---
+import { SITES } from "../lib/sites";
 const { transparent = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const path = Astro.url.pathname.replace(base, "") || "/";
@@ -19,10 +20,10 @@ const url = (p: string) => `${base}${p}`;
     </a>
 
     <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider uppercase text-cream/90">
-      <a href="https://squidly-inc.github.io/scotts-mockup/" class="hover:text-gold-light transition">Restaurant</a>
-      <a href="https://squidly-inc.github.io/scotts-ballroom/" class="hover:text-gold-light transition">Ballroom</a>
-      <a href="https://squidly-inc.github.io/scotts-provisions/" class="hover:text-gold-light transition">Provisions</a>
-      <a href="https://www.scottssocialclub.com/" class="hover:text-gold-light transition">Social Club</a>
+      <a href={`${SITES.restaurant}/`} class="hover:text-gold-light transition">Restaurant</a>
+      <a href={`${SITES.ballroom}/`} class="hover:text-gold-light transition">Ballroom</a>
+      <a href={`${SITES.provisions}/`} class="hover:text-gold-light transition">Provisions</a>
+      <a href={`${SITES.socialClub}/`} class="hover:text-gold-light transition">Social Club</a>
       <a href={url("/our-story")} class:list={["hover:text-gold-light transition", isActive("/our-story") && "text-gold-light"]}>Our Story</a>
     </nav>
 
@@ -42,10 +43,10 @@ const url = (p: string) => `${base}${p}`;
 
   <div data-mobile-menu class="hidden lg:hidden bg-ink text-cream border-t border-cream/10">
     <nav class="flex flex-col px-5 py-6 gap-1 text-sm uppercase tracking-wider">
-      <a href="https://squidly-inc.github.io/scotts-mockup/" class="py-3 border-b border-cream/10 hover:text-gold-light">Restaurant</a>
-      <a href="https://squidly-inc.github.io/scotts-ballroom/" class="py-3 border-b border-cream/10 hover:text-gold-light">Ballroom</a>
-      <a href="https://squidly-inc.github.io/scotts-provisions/" class="py-3 border-b border-cream/10 hover:text-gold-light">Provisions</a>
-      <a href="https://www.scottssocialclub.com/" class="py-3 border-b border-cream/10 hover:text-gold-light">Social Club</a>
+      <a href={`${SITES.restaurant}/`} class="py-3 border-b border-cream/10 hover:text-gold-light">Restaurant</a>
+      <a href={`${SITES.ballroom}/`} class="py-3 border-b border-cream/10 hover:text-gold-light">Ballroom</a>
+      <a href={`${SITES.provisions}/`} class="py-3 border-b border-cream/10 hover:text-gold-light">Provisions</a>
+      <a href={`${SITES.socialClub}/`} class="py-3 border-b border-cream/10 hover:text-gold-light">Social Club</a>
       <a href={url("/our-story")} class="py-3 border-b border-cream/10 hover:text-gold-light">Our Story</a>
       <a href={url("/contact")} class="mt-4 bg-gold text-ink text-center font-semibold py-3 hover:bg-cream transition">Contact</a>
     </nav>

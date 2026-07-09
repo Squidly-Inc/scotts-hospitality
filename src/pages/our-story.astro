@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { SITES } from "../lib/sites";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const url = (p: string) => `${base}${p}`;
@@ -91,22 +92,22 @@ const url = (p: string) => `${base}${p}`;
         <h2 class="font-display text-3xl sm:text-5xl text-ink leading-tight">Four concepts. One family.</h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="https://squidly-inc.github.io/scotts-mockup/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+        <a href={`${SITES.restaurant}/`} class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
           <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">1985</p>
           <h3 class="font-display text-xl text-ink mb-2">Scott's Seafood San Jose</h3>
           <p class="text-ink/70 text-sm leading-relaxed">The flagship restaurant — on 1st Street since 2020.</p>
         </a>
-        <a href="https://squidly-inc.github.io/scotts-ballroom/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+        <a href={`${SITES.ballroom}/`} class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
           <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2024</p>
           <h3 class="font-display text-xl text-ink mb-2">Scott's Ballroom</h3>
           <p class="text-ink/70 text-sm leading-relaxed">Event venue at the San Jose Rotary Summit Center.</p>
         </a>
-        <a href="https://www.scottssocialclub.com/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+        <a href={`${SITES.socialClub}/`} class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
           <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2025</p>
           <h3 class="font-display text-xl text-ink mb-2">Scott's Social Club</h3>
           <p class="text-ink/70 text-sm leading-relaxed">A private members' community.</p>
         </a>
-        <a href="https://squidly-inc.github.io/scotts-provisions/" class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
+        <a href={`${SITES.provisions}/`} class="block bg-cream-soft p-6 border-t-2 border-gold hover:shadow-lg transition">
           <p class="text-gold-deep uppercase tracking-widest text-xs mb-2">2026</p>
           <h3 class="font-display text-xl text-ink mb-2">Scott's Provisions</h3>
           <p class="text-ink/70 text-sm leading-relaxed">Catering for workplaces and events.</p>

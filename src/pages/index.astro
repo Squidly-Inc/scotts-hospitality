@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { SITES } from "../lib/sites";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const url = (p: string) => `${base}${p}`;
@@ -11,7 +12,7 @@ const properties = [
     name: "Scott's Seafood San Jose",
     tagline: "Coastal cuisine. Elevated experience.",
     body: "The flagship restaurant. Four decades of seafood-driven hospitality in downtown San Jose.",
-    href: "https://squidly-inc.github.io/scotts-mockup/",
+    href: `${SITES.restaurant}/`,
     img: `${base}/photos/hosp-01-restaurant.jpg`,
     accent: "text-ink",
   },
@@ -19,7 +20,7 @@ const properties = [
     name: "Scott's Ballroom",
     tagline: "Above the skyline.",
     body: "7,163 sq ft of event space at the San Jose Rotary Summit Center. Weddings, galas, and corporate events for up to 790+.",
-    href: "https://squidly-inc.github.io/scotts-ballroom/",
+    href: `${SITES.ballroom}/`,
     img: `${base}/photos/hosp-02-ballroom.jpg`,
     accent: "text-ink",
   },
@@ -27,7 +28,7 @@ const properties = [
     name: "Scott's Social Club",
     tagline: "A members' table.",
     body: "A private members' community for Silicon Valley professionals — networking, dining, and curated experiences.",
-    href: "https://www.scottssocialclub.com/",
+    href: `${SITES.socialClub}/`,
     img: `${base}/photos/hosp-03-social-club.jpg`,
     accent: "text-ink",
   },
@@ -35,7 +36,7 @@ const properties = [
     name: "Scott's Provisions",
     tagline: "Chef-driven catering.",
     body: "Customizable boxed meals, drop-off catering, full-service events, and bar service. Built for the modern workplace.",
-    href: "https://squidly-inc.github.io/scotts-provisions/",
+    href: `${SITES.provisions}/`,
     img: `${base}/photos/hosp-04-provisions.jpg`,
     accent: "text-ink",
   },

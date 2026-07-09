@@ -1,3 +1,4 @@
 ---
-return Astro.redirect("https://squidly-inc.github.io/scotts-mockup/private-dining");
+import { SITES } from "../lib/sites";
+return Astro.redirect(`${SITES.restaurant}/private-dining`);
 ---
