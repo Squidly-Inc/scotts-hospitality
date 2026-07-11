@@ -5,7 +5,8 @@ import { SITES } from "../lib/sites";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const url = (p: string) => `${base}${p}`;
 
-const heroVideo = "https://video.wixstatic.com/video/56773e_bc6abf78abb1447fa292b3a558ead3ce/1080p/mp4/file.mp4";
+const heroVideo = `${base}/videos/hospitality-hero.mp4`;
+const heroPoster = `${base}/videos/hospitality-hero-poster.jpg`;
 
 const properties = [
   {
@@ -51,7 +52,7 @@ const properties = [
   <!-- HERO -->
   <section class="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
     <video class="absolute inset-0 w-full h-full object-cover" src={heroVideo} autoplay muted loop playsinline
-      poster="https://static.wixstatic.com/media/56773e_e8eb6ec8755447599adca9d512c222c4~mv2.jpg/v1/fill/w_1920,h_1080/JK8A0325-1-6-scaled_edited.jpg"></video>
+      poster={heroPoster}></video>
     <div class="absolute inset-0 bg-ink/60"></div>
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-5 sm:px-8">
       <p class="fade-up text-gold-light uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 sm:mb-6">
